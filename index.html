@@ -11,7 +11,157 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
     <title>MSP Stores</title>
     <link rel="stylesheet" href="https://github.com/BavleyAdel/MSP-Stores/blob/9fc7e9b3581246c769cbe91998116296d4eb49db/style.css">
+    <style>
+        body{
+    background-color: #eee;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: larger;
+    font-weight: bold;
 
+}
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    max-height: 8%;
+    background-color: #2567dd;
+    z-index: 100;
+}
+
+.nav-bar h1 {
+    position: relative;
+    top: -18px;
+    color: white;
+    padding-left: 3%;
+    font-size: 40px;
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 350px auto;
+    grid-template-areas: "aside main";
+    position: relative;
+    height: 100vh;
+    top: 70px;
+    column-gap: 50px;
+}
+
+aside{
+    grid-area: aside;
+}
+.category-div{
+    background-color: white;
+    width: 70%;
+    border-radius: 7px;
+    padding: 20px;
+    margin: 15px auto;
+    box-shadow:  3px 3px 15px 1px #b7b7b7;
+}
+.category-list{
+    display: grid;
+    grid-template-columns: 50px auto;
+    gap: 7px;
+    margin-bottom: 10px;
+}
+aside p{
+    position: relative;
+    float: right;
+    display: inline;
+    margin-top: -50px;
+}
+#range{
+    width: 100%;    
+}
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3 , 255px);
+    grid-template-rows: repeat(2 , auto);
+    gap: 37px;
+}
+.product{
+    background-color: white;
+    border-radius: 7px;
+    box-shadow:  2px 2px 15px 1px #b7b7b7;
+    
+}
+.image{
+    padding: 20px;
+    position: relative;
+}
+.image p{
+    font-size: 15px;
+    margin-top: -10px;
+    opacity: 0.7;
+}
+.image img{
+    width: 100%;
+   border-radius: 10px;
+}
+.image::after{
+    content: "25$";
+    background-color: rgb(1, 114, 1);
+    padding: 3px 15px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+.product2{
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2 , auto);
+    grid-template-areas: "img desc";
+}
+.product2 .image img{
+    grid-area: img;
+    height: 100%;
+    width: 112%;
+}
+.description{
+    position: relative;
+    grid-area: desc;
+    padding: 20px;
+}
+.description::after{
+    content: "Suggested for you";
+    background-color: rgb(182, 46, 4);
+    padding: 5px 25px;
+    border-radius: 20px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.description p{
+    font-size: 18px;
+    font-weight: normal;
+}
+hr{
+    border: 1px solid #5e5e5e;
+}
+.btn{
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    width: 100%;
+    margin: 3px;
+    color: white;
+}
+.one{
+    background-color: rgb(1, 114, 1);
+}
+.two{
+    background-color: #2567dd;
+}
+    </style>
 </head>
 
 <body>
